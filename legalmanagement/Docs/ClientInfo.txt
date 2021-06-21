@@ -1,0 +1,28 @@
+Client object
+
+ FieldName          | Type                  | Description
+ ---------------------------------------------------------
+ Salutation         | String                | The preferred greeting of client (Ms.\Mr.\Mrs.\Dude\Bro)
+ FirstName          | String                | If client is a person then first name
+ LastName           | String                | If client is a person then last name 
+ DateOfBirth        | Date                  | Client DateOfBirth
+ SSN                | String                | Client's Social Security number (most likely just last 4)
+ OrganizationName   | String                | If client is a business then the name of organization 
+ PhysicalAddress1   | String                | Client's home address line 1
+ PhysicalAddress2   | String                | Client's home address line 2 ( suite/apartment number )
+ PhysicalCity       | String                | Client's home city 
+ PhysicalState      | String(2)             | Client's home state
+ PhysicalZip        | String(5)             | Client's home zipcode
+ MailingAddress1    | String                | Client's mailing address line 1
+ MailingAddress2    | String                | Client's mailing address line 2 ( suite/apartment number )
+ MailingCity        | String                | Client's mailing city 
+ MailingState       | String(2)             | Client's mailing state
+ MailingZip         | String(5)             | Client's mailing zipcode
+ Email              | String                | Client's email address
+ HomePhone          | number                | Client's home phone number
+ WorkPhone          | number                | Client's work phone number
+ MobilePhone        | number                | Client's cell phone number
+ MobileText         | boolean               | Whether a client consents to contact via text message
+ ReferralInfo       | String                | Short string indicating who referred the client if applicable
+ EnteredDate        | DateTime              | Date/Time indicating when the client info was entered into the system
+ ManagingAttorney   | int (fk)              | id indicating the attorney who is primary contact for client
