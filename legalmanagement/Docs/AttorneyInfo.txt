@@ -1,0 +1,10 @@
+Attorney object
+
+FieldName                               | Type                                  | Description
+----------------------------------------------------------------------------------------------
+FirstName
+LastName
+DateOfBirth
+DateOfHire
+LawSchool
+DefaultBillingRate
