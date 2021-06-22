@@ -1,18 +1,37 @@
-$.when($.ready).then(
-    function(){
-        $('[data-bs-toggle="tooltip"]').tooltip()
-    }
-);
+document.addEventListener("DOMContentLoaded", function(event) {
 
-function toggleMenuSize(){
-    var menu = $('#sideNav').hasClass("main-nav-column")
-    if(menu){
-        $('#sideNav').removeClass("main-nav-column").addClass("main-nav-column-expanded")
-        $('.menuHidden').removeClass("visually-hidden")
-        $('#logo').removeClass('logo').addClass('logo-expanded')
-    } else{
-        $('#sideNav').removeClass("main-nav-column-expanded").addClass("main-nav-column")
-        $('.menuHidden').addClass("visually-hidden")
-        $('#logo').removeClass('logo-expanded').addClass('logo')
+    const showNavbar = (toggleId, navId, bodyId, headerId) =>{
+    const toggle = document.getElementById(toggleId),
+    nav = document.getElementById(navId),
+    bodypd = document.getElementById(bodyId)
+    
+    // Validate that all variables exist
+    if(toggle && nav && bodypd){
+    toggle.addEventListener('click', ()=>{
+    // show navbar
+    nav.classList.toggle('show')
+    // change icon
+    toggle.classList.toggle('bx-x')
+    // add padding to body
+    bodypd.classList.toggle('body-pd')
+    // add padding to header
+    headerpd.classList.toggle('body-pd')
+    })
     }
-}
+    }
+    
+    showNavbar('header-toggle','nav-bar','main-body','header')
+    
+    /*===== LINK ACTIVE =====*/
+    const linkColor = document.querySelectorAll('.nav-link')
+    
+    function colorLink(){
+    if(linkColor){
+    linkColor.forEach(l=> l.classList.remove('active'))
+    this.classList.add('active')
+    }
+    }
+    linkColor.forEach(l=> l.addEventListener('click', colorLink))
+    
+    $('[data-bs-toggle="tooltip"]').tooltip()
+});
