@@ -1,4 +1,58 @@
 .logo {
-    width: 60px;
-    height: 60px;
+    width: 5rem;
+    height: 5rem;
 }
+.logo-expanded{
+    height: 8rem;
+    width: 8rem;
+}
+body {
+    min-height: 100vh;
+    min-height: -moz-available;
+    min-height: -webkit-fill-available;
+    min-height: fill-available;
+  }
+  
+  html {
+    height: -webkit-fill-available;
+  }
+  
+  html, body {
+      overflow-x:hidden;
+  }
+  
+  main {
+    display: flex;
+    flex-wrap: nowrap;
+    min-height: 100vh;
+    height: 100vh;
+    height: -moz-available;
+    height: -webkit-fill-available;
+    height: fill-available;
+    max-height: 100vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  
+  .main-nav-column{
+      width: 4rem;
+  }
+
+  .main-nav-column-expanded{
+      width: 10rem;
+  }
+
+  .bi {
+    vertical-align: -.125em;
+    pointer-events: none;
+    fill: currentColor;
+  }
+  
+  .dropdown-toggle { outline: 0; }
+  
+  .nav-flush .nav-link {
+    border-radius: 0;
+  }
+  circle{
+      color: black;
+  }

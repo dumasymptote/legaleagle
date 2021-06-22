@@ -1,19 +1,42 @@
 
 {% load static %}
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container-fluid">
-        <a href="#" class="navbar-brand">
-            <img src="{% static 'main/images/logo.svg' %}" alt="Legal Eagle Logo" class="logo" />
-            Legal Eagle
+<div  id="sideNav" class="d-flex flex-column flex-shrink-0 p-3 main-nav-column align-items-center" >
+    <a href="#" class="d-flex align-items-center">
+        <img src="{% static 'main/images/logo.svg' %}" alt="Legal Eagle Logo" class="logo" id="logo" />
+    </a>
+    <hr>
+    <!--<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button> -->
+    <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+        <li class="nav-item">
+            <a class="nav-link" href="#" title="Home" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home">
+                <ion-icon aria-label="Home" name="home-outline"></ion-icon>
+                <span class="menuHidden visually-hidden">Home</span>
+            </a>
+        </li>
+        <hr>
+        <li class="nav-item">
+            <a class="nav-link" href="#" title="Admin" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Admin">
+                <ion-icon name="hammer-outline"></ion-icon>
+                <span class="menuHidden visually-hidden">Admin</span>
+            </a>
+        </li>
+    </ul>
+    <a class="nav-link" role="button" onclick="toggleMenuSize()" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Expand/Collapse"><ion-icon name="resize-outline"></ion-icon></a>
+    <hr>
+    <div class="dropdown">
+        <a href="#" class="d-flex align-items-center dropdown-toggle" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+        <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="25" cy="25" r="25" stroke="black" fill="black" />
+        </svg>
+        <span class="menuHidden visually-hidden">Username</span>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul id="nav-mobile" class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="/admin">Admin</a></li>
-            </ul>
-        </div>
+        <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="userDropdown">
+            <li><a class="dropdown-item">Check User Reports</a></li>
+            <li><a class="dropdown-item">Update User Info</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item">Logout</a></li>
+        </ul>
     </div>
-</nav>
+</div>
