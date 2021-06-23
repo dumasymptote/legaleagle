@@ -150,4 +150,4 @@ LOGIN_URL = '/accounts/login/'
 
 LOGOUT_URL = '/accounts/logout/' 
 LOGOUT_REDIRECT_URL = "/"
-LOGIN_REDIRECT_URL = 'dashboard/'
+LOGIN_REDIRECT_URL = "/dashboard/"

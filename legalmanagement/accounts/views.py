@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.http.response import HttpResponseRedirect
+from django.urls import reverse
 from django.contrib.auth.forms import  AuthenticationForm
 from django.contrib.auth import logout, authenticate, login
 from django.shortcuts import render, redirect
@@ -16,7 +17,7 @@ def login_request(request):
             if user is not None:
                 login(request, user)
                 messages.info(request, f"You are now logged in as {username}")
-                redirect("main:dashboard")
+                HttpResponseRedirect(reverse('main:dashboard'))
             else:
                 messages.error(request, "Invalid username or password.")
         else:

@@ -37,8 +37,13 @@
         {% if user.is_authenticated %}
             <a href="{% url 'logout' %}" class="nav-link"> 
                 <ion-icon name="log-out-outline" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Sign Out"></ion-icon>
-                <span class="nav-name">SignOut</span> 
+                <span class="nav-name">Sign Out</span> 
             </a>
+        {% else %}
+        <a href="{% url 'login' %}" class="nav-link"> 
+            <ion-icon name="log-in-outline" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Sign In"></ion-icon>
+            <span class="nav-name">Sign In</span> 
+        </a>
         {% endif %}
     </nav>
 </div>
