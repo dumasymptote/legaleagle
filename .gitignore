@@ -149,5 +149,10 @@ cython_debug/
 # Local History for Visual Studio Code
 .history/
 
+#files with passwords and keys
 secret.txt
 dbinfo.txt
+
+#development email folder
+sent_emails/*
+sent_emails/

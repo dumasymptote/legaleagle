@@ -148,7 +148,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #login info
 LOGIN_URL = '/accounts/login/'
-
 LOGOUT_URL = '/accounts/logout/' 
 LOGOUT_REDIRECT_URL = "/"
 LOGIN_REDIRECT_URL = "/dashboard/"
+
+# Email Information
+# file based email for testing
+if DEBUG:
+    EMAIL_BACKEND ="django.core.mail.backends.filebased.EmailBackend"
+    EMAIL_FILE_PATH = str(BASE_DIR.joinpath('sent_emails'))
