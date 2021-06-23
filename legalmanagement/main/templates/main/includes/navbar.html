@@ -13,11 +13,12 @@
                     <ion-icon class='nav-icon' id="header-toggle" name="menu-outline" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Expand"></ion-icon>
                     <span class="nav-name">Menu</span>
                 </div>
-                <a class="nav-link" href="#" >
+                
+                <a class="nav-link" href="{% url 'main:home' %}" >
                     <ion-icon aria-label="Home" name="home-outline" class="nav-icon" title data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home"></ion-icon>
                     <span class="nav-name">Home</span>
                 </a>
-                <a class="nav-link" href="#" >
+                <a class="nav-link" href="{% url 'admin:index' %}" >
                     <ion-icon aria-label="Admin" name="hammer-outline" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Admin"></ion-icon>
                     <span class="nav-name">Admin</span>
                 </a>
